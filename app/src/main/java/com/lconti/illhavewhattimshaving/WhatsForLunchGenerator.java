@@ -19,7 +19,7 @@ public class WhatsForLunchGenerator implements IWhatsForLunchGenerator {
     }
 
     @Override
-    public Lunch GetNextLunch() {
+    public Lunch getNextLunch() {
         int randomDataRowIndex = random.nextInt(lunches.length);
         return lunches[randomDataRowIndex];
     }
