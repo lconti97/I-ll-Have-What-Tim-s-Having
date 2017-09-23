@@ -2,12 +2,13 @@ package com.lconti.illhavewhattimshaving;
 
 
 public class WhatsForLunchPresenter implements IWhatsForLunchPresenter {
+
     private WhatsForLunchGenerator whatsForLunchGenerator;
     private IWhatsForLunchView whatsForLunchView;
 
     public WhatsForLunchPresenter(IWhatsForLunchView whatsForLunchView) {
-        whatsForLunchGenerator = new WhatsForLunchGenerator();
         this.whatsForLunchView = whatsForLunchView;
+        whatsForLunchGenerator = DaggerWhatsForLunchComponent.create().whatsForLunchGenerator();
     }
 
     @Override

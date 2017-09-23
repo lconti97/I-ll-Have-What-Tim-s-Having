@@ -8,7 +8,7 @@ import android.widget.TextView;
 
 public class WhatsForLunchView extends AppCompatActivity implements IWhatsForLunchView{
     private WhatsForLunchPresenter whatsForLunchPresenter;
-    private Button illHaveWhatTimsHavingButton;
+    private Button whatsForLunchButton;
     private TextView restaurantTextView;
     private TextView mealTextView;
 
@@ -19,11 +19,11 @@ public class WhatsForLunchView extends AppCompatActivity implements IWhatsForLun
 
         whatsForLunchPresenter = new WhatsForLunchPresenter(this);
 
-        illHaveWhatTimsHavingButton = (Button) findViewById(R.id.whats_for_lunch_button);
+        whatsForLunchButton = (Button) findViewById(R.id.whats_for_lunch_button);
         restaurantTextView = (TextView) findViewById(R.id.restaurant_text_view);
         mealTextView = (TextView) findViewById(R.id.meal_text_view);
 
-        illHaveWhatTimsHavingButton.setOnClickListener(new View.OnClickListener() {
+        whatsForLunchButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 whatsForLunchPresenter.getNextLunch();
