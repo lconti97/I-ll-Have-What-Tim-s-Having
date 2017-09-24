@@ -1,9 +1,12 @@
 package com.lconti.illhavewhattimshaving;
 
 
+import javax.inject.Inject;
+
 public class WhatsForLunchPresenter implements IWhatsForLunchPresenter {
 
-    private WhatsForLunchGenerator whatsForLunchGenerator;
+    @Inject
+    WhatsForLunchGenerator whatsForLunchGenerator;
     private IWhatsForLunchView whatsForLunchView;
 
     public WhatsForLunchPresenter(IWhatsForLunchView whatsForLunchView) {

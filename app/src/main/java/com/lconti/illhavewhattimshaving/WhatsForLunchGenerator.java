@@ -3,6 +3,8 @@ package com.lconti.illhavewhattimshaving;
 
 import java.util.Random;
 
+import javax.inject.Inject;
+
 public class WhatsForLunchGenerator implements IWhatsForLunchGenerator {
 
     private Random random;
@@ -14,6 +16,7 @@ public class WhatsForLunchGenerator implements IWhatsForLunchGenerator {
         new Lunch("Souvlaki", "Gyro plate")
     };
 
+    @Inject
     public WhatsForLunchGenerator() {
         random = new Random();
     }
